@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            
+             mc:Ignorable="d"
+             x:Class="testu.MainPage">
+    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Cancel" Text="Cancel" Clicked="CancelClicked" Order="Secondary"/>
+        <ToolbarItem x:Name="Save" Icon="icon1.png" Clicked="SaveClicked" />
+        <ToolbarItem x:Name="Edit" Text="Edit" Clicked="EditClicked" Order="Secondary"/>
+        <ToolbarItem x:Name="Settings" Text="Settings" Clicked="SettingsClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Switch:" Margin="10,0,0,0"/>
+                <Switch x:Name="SwitchT" HorizontalOptions="Center" IsToggled="False"/>
+
+            </StackLayout>
+            
+            <DatePicker x:Name="MyPicker" MinimumDate="3/8/2016" 
+                        MaximumDate="9/11/2019"  />
+            <Label x:Name="DateLabel"
+                   FontSize="30"
+                   Text="{Binding Date,Source={x:Reference MyPicker}}"
+                   HorizontalOptions="Center"
+                   TextColor="Red"/>
+
+
+            <StackLayout x:Name="ImgCircleStack"> 
+                
+            </StackLayout>
+ 
+            <SearchBar x:Name="sb_search" Placeholder="Search"/>
+        
+        <ListView x:Name="habitlist">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding Name}"/>
+                        <Label Grid.Column="1" Text="{Binding Value}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        
+    </StackLayout>
+        
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testu.Views.Menu.Dashboard">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Label Text="Welcome" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+            <Button Text="Screen 1" Clicked="SelectedScreen1" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="Main Page" Clicked="SelectedPage" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="plot" Clicked="OxyPlotView" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="scroll" Clicked="ScrollViewButton" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="DataBinding" Clicked="Binding" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="TabbedInterface" Clicked="TabbedInterface" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="CarouselInterface" Clicked="CarouselInterface" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="Visual Effects" Clicked="Effects_Clicked" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="Flex Layout" Clicked="Flex_Form" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Button Text="Layout" Clicked="LayoutScreen" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Text="Add User" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" TextColor="Black" Clicked="AddUser"/>
+            <Button Text="GetUsers" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" TextColor="Black" Clicked="GetUsers"/>
+
+            <Label Text="Entry" />
+            <Entry x:Name="Entry1" Placeholder="Entry1" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Password" />
+            <Entry x:Name="EntryPassword" Text="{Binding Editor1,Mode=OneWay}" Placeholder="Password" IsPassword="True"  HorizontalOptions="FillAndExpand"/>
+            <Label Text="Edit" />
+            <Editor x:Name="Editor1" HeightRequest="100"  HorizontalOptions="FillAndExpand" Completed="Editor1_Completed"/>
+
+            <Picker  x:Name="picker" Title="Color" HorizontalOptions="CenterAndExpand"></Picker>
+            <BoxView x:Name="boxview" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center"></BoxView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

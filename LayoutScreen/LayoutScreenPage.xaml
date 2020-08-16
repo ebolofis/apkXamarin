@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testu.Views.LayoutScreen.LayoutScreenPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"></RowDefinition>
+            <RowDefinition Height="AUTO"></RowDefinition>
+            <RowDefinition Height="AUTO"></RowDefinition>
+            <RowDefinition Height="AUTO"></RowDefinition>
+            <RowDefinition Height="AUTO"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Header Background-->
+        <!--<BoxView BackgroundColor="Yellow" Grid.Row="0"/>-->
+        <Image Source="background.png" Aspect="AspectFill"/>
+   
+        <BoxView BackgroundColor="Azure" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" VerticalOptions="End" TranslationY="50"/>
+        <!--profile name-->
+        <StackLayout Grid.Row="1" Padding="0,50,0,0">
+            <Label Text="Tson" Style="{StaticResource ProfileNameLabel}"/>
+            <Label Text="Super Surprised Man" Style="{StaticResource ProfileTagLabel}"/>
+        </StackLayout>
+        
+      <!--social stats-->
+        
+    <Grid Grid.Row="2" Margin="0,30" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        
+            <StackLayout Grid.Column="0">
+                <Label Text="33" Style="{StaticResource StatsNumberLabel}"/>
+                <Label Text="Likes" Style="{StaticResource StatsCaptionLabel}"/>
+            </StackLayout>
+        
+            <StackLayout Grid.Column="1">
+                <Label Text="65" Style="{StaticResource StatsNumberLabel}"/>
+                <Label Text="Following" Style="{StaticResource StatsCaptionLabel}"/>
+            </StackLayout>
+        
+            <StackLayout Grid.Column="2">
+                <Label Text="950" Style="{StaticResource StatsNumberLabel}"/>
+                <Label Text="Followers" Style="{StaticResource StatsCaptionLabel}"/>
+            </StackLayout>
+        
+        </Grid>
+
+        <!--profile description-->
+        <Label Grid.Row="3" 
+               Text="SOme very random text that describes nothing bu a very description of anything totally hahahahahhahahahahahhahahahah !!!!!!! :D" 
+               Style="{StaticResource MainBodyLabel}" Margin="20,0"/>
+        
+        <!--follow button-->
+        <Button Grid.Row="4" Text="Follow" Style="{StaticResource FollowButton}" Margin="20"/>
+
+        <Image Source="profilepic.png" HorizontalOptions="Center" VerticalOptions="End" WidthRequest="150" HeightRequest="100" TranslationY="50"/>
+    </Grid>
+</ContentPage>

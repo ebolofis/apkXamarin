@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testu.Views.Users.GetUsersView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="UserList" HasUnevenRows="True" ItemTapped="EditUser">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <!--Clicked="DeleteUser"-->
+                                <MenuItem Text="Delete"  IsDestructive="true" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Vertical">
+                            <Grid BackgroundColor="White" HeightRequest="30"/>
+                                <StackLayout Orientation ="Vertical" Spacing ="10" Padding="20" BackgroundColor="Aqua">
+                                    <Label Text="Username: " TextColor="Red" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding UserName}" TextColor="Red" HorizontalOptions="Center" />
+                                    <Label Text="Password: " TextColor="Green" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding Password}" TextColor="Green" TextDecorations="Underline"  HorizontalOptions="Center"/>
+                                    <Label Text="Address: " TextColor="Pink" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding Address}" TextColor="Pink" HorizontalOptions="Center"/>
+                                    <Label Text="PhoneNumber: "  TextColor="Orange" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding PhoneNumber}" TextColor="Orange" HorizontalOptions="Center"/>
+                                    <Label Text="Email: " HorizontalOptions="Start" TextColor="Yellow"/>
+                                    <Label Text="{Binding Email}" TextColor="Yellow" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

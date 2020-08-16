@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testu.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name=" MasterLayout">
+            <StackLayout x:Name="LogoStack">
+                <Label x:Name="lbl_NoInternet" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Red"/>
+                <Image x:Name="LoginIcon" Source="LoginIcon.png" Margin="0,80,0,0"/>
+            </StackLayout>
+            <StackLayout x:Name="LoginEntriesStack" >
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" Phone="40,0,40,0" Tablet="140,150,140,0"/>
+                </StackLayout.Padding>
+                <ProgressBar x:Name="ProcessBar" Progress=".0" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="ProgressButton" Text ="make progress" Clicked="ProgressButton_Clicked"/>
+                <Picker x:Name="MainPicker" SelectedIndexChanged="MainPicker_SelectedIndexChanged" />
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="true"/>
+
+                <Label x:Name="Lbl_Username" Text="Username"/>
+                <Entry x:Name="Entry_Username" Placeholder="Username" TextChanged="OnUserNameCompletion"/>
+                <Label x:Name="Lbl_Password" Text="Password"/>
+                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
+                <Button  x:Name="Btn_LogIn" Text="Sign in" Clicked="LogInProcedure"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

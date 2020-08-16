@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:testu.Views"
+            xmlns:local1="clr-namespace:testu.Views.Menu"
+            xmlns:local2="clr-namespace:testu.Views.LayoutScreen"
+            mc:Ignorable="d"
+             x:Class="testu.Views.TabView.MyTabbedPage">
+  <!--Pages can be added as references or inline-->
+
+    <local:LoginPage></local:LoginPage>
+    <local1:Dashboard></local1:Dashboard>
+    <local:OxyPlotView></local:OxyPlotView>
+    <local2:LayoutScreenPage></local2:LayoutScreenPage>
+    
+    
+    <ContentPage Title="Tab 1"  Icon="icon1.png">
+            <ContentPage.Content>
+            <StackLayout>
+                <Label Text="New Navigation Way" VerticalOptions="Center" HorizontalOptions="Center"> </Label>
+            </StackLayout>
+            </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Tab 2" Icon="LoginIcon.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="New Navigation Way2222222222" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Tab 3" Icon="profilepic.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="New Navigation Way33333333333333" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        </StackLayout>
+        </ContentPage.Content>
+        </ContentPage>
+
+</TabbedPage>
